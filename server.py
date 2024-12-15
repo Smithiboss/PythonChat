@@ -20,6 +20,7 @@ class Server:
     def broadcast(self, msg):
         for client in self.clients:
             client.sendall(msg.encode())
+        print(msg)
 
     def handle(self, client):
         while True:
